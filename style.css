@@ -74,49 +74,6 @@ h1 {
   font-size: 17px;
 }
 
-/* ---------- Barra de progresso ---------- */
-.barra {
-  width: 100%;
-  max-width: 360px;
-  height: 14px;
-  border: 2px solid var(--texto);
-  border-radius: 999px;
-  overflow: hidden;
-  background: var(--branco);
-}
-.barra-preenchida {
-  display: block;
-  width: 70%;
-  height: 100%;
-  background: repeating-linear-gradient(-45deg, var(--amarelo) 0 10px, #FFD84D 10px 20px);
-  background-size: 28px 28px;
-  animation: listras 1s linear infinite;
-}
-
-/* ---------- Botões ---------- */
-.botoes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-.botao {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  padding: 0 24px;
-  border-radius: 999px;
-  border: 2px solid var(--texto);
-  background: var(--branco);
-  color: var(--texto);
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.15s ease;
-}
-.botao:hover { transform: translateY(-2px); }
-.botao:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
-.botao-principal { background: var(--amarelo); }
-
 .rodape {
   margin-top: auto;
   padding-top: 24px;
@@ -124,71 +81,5 @@ h1 {
   color: #5B616B;
 }
 
-/* ---------- Cena ---------- */
-.cena { width: 100%; max-width: 640px; height: auto; }
-
-.chao { stroke: #E0DCD0; stroke-width: 4; stroke-linecap: round; }
-.janela { fill: var(--branco); stroke: var(--texto); stroke-width: 4; }
-.contorno { stroke: var(--texto); stroke-width: 4; stroke-linecap: round; fill: none; }
-.contorno-fino { stroke: var(--texto); stroke-width: 3; }
-.amarelo { fill: var(--amarelo); }
-.cinza { fill: var(--cinza); }
-.card { fill: var(--cinza-claro); stroke: var(--texto); stroke-width: 2; }
-
-.cabeca { fill: var(--texto); }
-.corpo { stroke: var(--texto); stroke-linecap: round; }
-.tronco { stroke-width: 16; }
-.perna { stroke-width: 9; }
-.cabo { stroke: #8A6A2F; stroke-width: 5; stroke-linecap: round; }
-
-/* blocos aparecendo um por um */
-.bloco { transform-box: fill-box; transform-origin: center; opacity: 0; }
-.b1 { animation: b1 9s ease-out infinite; }
-.b2 { animation: b2 9s ease-out infinite; }
-.b3 { animation: b3 9s ease-out infinite; }
-.b4 { animation: b4 9s ease-out infinite; }
-.b5 { animation: b5 9s ease-out infinite; }
-.b6 { animation: b6 9s ease-out infinite; }
-
-@keyframes b1 { 0%, 8% { opacity: 0; transform: scale(.6); } 12%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-@keyframes b3 { 0%, 20% { opacity: 0; transform: scale(.6); } 24%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-@keyframes b4 { 0%, 29% { opacity: 0; transform: scale(.6); } 33%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-@keyframes b2 { 0%, 41% { opacity: 0; transform: scale(.6); } 45%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-@keyframes b5 { 0%, 54% { opacity: 0; transform: scale(.6); } 58%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-@keyframes b6 { 0%, 66% { opacity: 0; transform: scale(.6); } 70%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; } }
-
-/* boneco andando com o bloco amarelo */
-.andando { animation: andar 9s linear infinite; }
-@keyframes andar {
-  0%       { transform: translateX(-60px); opacity: 0; }
-  4%       { transform: translateX(-50px); opacity: 1; }
-  38%      { transform: translateX(80px);  opacity: 1; }
-  42%      { transform: translateX(86px);  opacity: 0; }
-  100%     { transform: translateX(-60px); opacity: 0; }
-}
-.passo-a, .passo-b { transform-box: view-box; transform-origin: 0px -50px; }
-.passo-a { animation: passo 0.5s ease-in-out infinite alternate; }
-.passo-b { animation: passo 0.5s ease-in-out infinite alternate-reverse; }
-@keyframes passo { from { transform: rotate(-16deg); } to { transform: rotate(16deg); } }
-
-/* boneco martelando */
-.martelo { transform-box: view-box; transform-origin: 0px -92px; animation: martelar 0.7s ease-in infinite; }
-@keyframes martelar {
-  0%, 100% { transform: rotate(-30deg); }
-  50%      { transform: rotate(8deg); }
-}
-.faiscas line { stroke: var(--amarelo); stroke-width: 4; stroke-linecap: round; animation: faisca 0.7s ease-in infinite; }
-@keyframes faisca {
-  0%, 45%  { opacity: 0; }
-  55%      { opacity: 1; }
-  80%,100% { opacity: 0; }
-}
-
-@keyframes listras { to { background-position: 28px 0; } }
-
-/* quem prefere menos movimento vê tudo parado */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .bloco { opacity: 1; }
-  .faiscas { display: none; }
-}
+/* ---------- Imagem ---------- */
+.cena { width: 100%; max-width: 560px; height: auto; margin: 16px 0; }
