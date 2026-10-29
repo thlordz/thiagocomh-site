@@ -8,7 +8,9 @@
   --branco: #FFFFFF;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -43,7 +45,12 @@ body {
   letter-spacing: -0.03em;
   text-align: left;
 }
-.logo-linha1 { position: relative; z-index: 2; }
+
+.logo-linha1 {
+  position: relative;
+  z-index: 2;
+}
+
 .logo-linha2 {
   position: relative;
   z-index: 1;
@@ -52,6 +59,7 @@ body {
   align-items: center;
   gap: 0.1em;
 }
+
 .logo-h {
   background: var(--amarelo);
   padding: 0 0.4em;
@@ -65,8 +73,20 @@ h1 {
   font-family: Sora, sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 6vw, 40px);
-  line-height: 1.15;
+  line-height: 0;
 }
+
+h2 {
+  margin: 8px 0 0;
+  font-size: clamp(8px, 6vw, 20px);
+  font-weight: 100;
+  font-family: Sora, sans-serif;
+  line-height: 80%;
+  color: var(--texto-suave);
+  opacity: 0.6;
+
+}
+
 .texto {
   margin: 0;
   max-width: 480px;
@@ -82,4 +102,9 @@ h1 {
 }
 
 /* ---------- Imagem ---------- */
-.cena { width: 100%; max-width: 560px; height: auto; margin: 16px 0; }
+.cena {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 16px 0;
+}
